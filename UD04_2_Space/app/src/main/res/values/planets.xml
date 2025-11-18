@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 🪐 Planet names -->
+    <string-array name="planet_names">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+    <!-- ☀️ Distance from Sun (in million km) -->
+    <string-array name="planet_distances">
+        <item>57.9</item>
+        <item>108.2</item>
+        <item>149.6</item>
+        <item>227.9</item>
+        <item>778.6</item>
+        <item>1433.5</item>
+        <item>2872.5</item>
+        <item>4495.1</item>
+    </string-array>
+
+    <!-- 🧾 Short information / description -->
+    <string-array name="planet_information">
+        <item>Mercury is the smallest and closest planet to the Sun. It has a rocky surface and no atmosphere to speak of.</item>
+        <item>Venus has a thick, toxic atmosphere rich in carbon dioxide and clouds of sulfuric acid, making it the hottest planet.</item>
+        <item>Earth is the only planet known to support life, with liquid water, a protective atmosphere, and diverse ecosystems.</item>
+        <item>Mars, known as the Red Planet, has a thin atmosphere and evidence of ancient rivers and possibly microbial life.</item>
+        <item>Jupiter is the largest planet, a gas giant with a Great Red Spot — a massive storm lasting centuries.</item>
+        <item>Saturn is famous for its spectacular ring system made of ice and rock particles orbiting the gas giant.</item>
+        <item>Uranus rotates on its side and has a blue-green color due to methane in its cold atmosphere.</item>
+        <item>Neptune, the farthest planet, has supersonic winds and a vivid blue hue caused by atmospheric methane.</item>
+    </string-array>
+
+    <!-- 🌫️ Atmospheric composition (major components) -->
+    <string-array name="planet_atmospheres">
+        <item>Trace oxygen, sodium, hydrogen, helium, potassium</item>
+        <item>96% carbon dioxide, 3% nitrogen</item>
+        <item>78% nitrogen, 21% oxygen, 1% other gases</item>
+        <item>95% carbon dioxide, 3% nitrogen, argon</item>
+        <item>90% hydrogen, 10% helium</item>
+        <item>96% hydrogen, 3% helium</item>
+        <item>83% hydrogen, 15% helium, 2% methane</item>
+        <item>80% hydrogen, 19% helium, 1% methane</item>
+    </string-array>
+
+    <!-- 🕐 Orbit time around the Sun (in Earth days) -->
+    <string-array name="planet_orbit_days">
+        <item>88</item>
+        <item>225</item>
+        <item>365</item>
+        <item>687</item>
+        <item>4333</item>
+        <item>10759</item>
+        <item>30687</item>
+        <item>60190</item>
+    </string-array>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tarea-05</string>
+    <string name="Title">UD02_ConstraintLayout_Practica</string>
+    <string name="user">usuario</string>
+    <string name="password">contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="result">Usuario: %1$s Contraseña: %2$s</string>
+</resources>

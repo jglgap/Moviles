@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.ud03_2_halloween.welcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_storySelectionFragment"
+            app:destination="@id/storySelectionFragment"
+            app:popUpTo="@id/welcomeFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/storySelectionFragment"
+        android:name="com.ud03_2_halloween.StorySelectionFragment"
+        android:label="fragment_story_selection"
+        tools:layout="@layout/fragment_story_selection" >
+        <action
+            android:id="@+id/action_storySelectionFragment_to_storyFragment"
+            app:destination="@id/storyFragment"
+            app:popUpTo="@id/storyFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="com.ud03_2_halloween.StoryFragment"
+        android:label="fragment_story"
+        tools:layout="@layout/fragment_story" >
+        <argument
+            android:name="storyTitle"
+            app:argType="string" />
+        <argument
+            android:name="storyText"
+            app:argType="string" />
+        <argument android:name="img"
+            app:argType="reference" />
+    </fragment>
+</navigation>

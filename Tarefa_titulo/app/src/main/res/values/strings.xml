@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Tarefa_titulo</string>
+    <string name="generate_new_title">Generar nuevo titulo</string>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">comment</string>
+    <string name="name">Nombre</string>
+    <string name="comment">Introduce un comentario</string>
+    <string name="comment_label">Comentarios</string>
+    <string name="name_label">Nombre</string>
+    <string name="enviar_comentario">Enviar comentario</string>
+</resources>

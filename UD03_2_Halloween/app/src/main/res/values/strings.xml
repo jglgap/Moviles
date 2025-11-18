@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">UD03_2_Halloween</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="InputName">Introduce tu nombre</string>
+    <string name="nameInputHint">Introduce tu nombre</string>
+    <string name="nextBtn">Siguiente</string>
+    <string name="selectStoryTitle">Selecciona una tematica</string>
+    <string name="monsterHouseStoryTitle">Casa monstruosa</string>
+    <string name="skinwalkerStoryTitle">El cambiapieles</string>
+    <string name="monsterHouseStoryContent">En lo alto de una colina olvidada, donde la niebla parece tener vida propia, se alzaba una casa antigua. Nadie en el pueblo quería acercarse. Los mayores decían que la casa respiraba por las noches. Los niños decían que la casa comía gente.
+Pero [name], curioso hasta los huesos y con un gusto particular por los misterios, no creía en cuentos. Así que un día, mochila al hombro y linterna en mano, subió por el camino de tierra hasta la entrada podrida de la casa.
+La puerta se abrió sola, como si lo estuviera esperando.
+Dentro, el aire olía a polvo, pero también a carne vieja. Las paredes estaban cubiertas de cuadros que parecían mirar a [name]. Y el suelo… crujía como si alguien caminara debajo de él.
+–¿Hola? –dijo [name], con la voz firme aunque su mano temblaba.
+La casa respondió con un susurro gutural desde las paredes:
+–Tengo hambre.
+[name] retrocedió, pero al girar hacia la puerta, esta ya no estaba. Solo una pared tapizada de bocas abiertas, con dientes como cuchillas de vidrio.
+Las habitaciones se reordenaban solas, como si la casa pensara, como si cada paso de [name] fuera un bocado más cerca del corazón. En el ático, encontró un diario antiguo, cubierto de sangre seca. Era de un arquitecto maldito, que construyó la casa usando materiales robados de ataúdes. Cada ladrillo tenía un alma atrapada. Y todas pedían lo mismo: libertad… o más carne.
+–Eres el primero en años –dijeron las paredes. –Te dejaremos ir… si traes a otro.
+[name] escapó esa noche. Nadie sabe cómo. No habla del tema. Solo observa a la gente del pueblo, como si eligiera a alguien.
+Y desde entonces, a veces, uno desaparece.
+Y la casa… sonríe.</string>
+    <string name="skinwalkerStoryContent">En las montañas donde los árboles parecen hablar entre sí y la luna apenas se atreve a mirar, había un bosque del que nadie regresaba igual. Los ancianos decían que un skinwalker —una criatura antigua, capaz de robar rostros y voces— rondaba esas tierras.
+Pero [name] no creía en mitos.
+Odiaba los secretos y los miedos heredados.
+Así que una noche, sin decirle a nadie, tomó su linterna, una cámara, y entró al bosque. Solo el crujido de las hojas bajo sus pies lo acompañaba. Al principio, todo estaba tranquilo. Demasiado tranquilo.
+Hasta que escuchó su propia voz.
+—Oye, espera. Ven por aquí —dijo desde la oscuridad, exactamente como si [name] lo hubiera dicho.
+Pero [name] no había abierto la boca.
+—¿Quién anda ahí? —preguntó.
+El bosque calló por unos segundos.
+Y luego, en un susurro desgarrado, la voz respondió:
+—Yo soy tú.
+[name] corrió. Corrió hasta que el bosque pareció cerrarse, cambiando los caminos detrás de él. Comenzó a ver cosas: su rostro reflejado en los árboles, su sombra caminando sola, una figura imitando su andar a unos metros… pero sin rostro.
+Horas más tarde, [name] salió del bosque.
+O al menos, algo salió.
+Caminó hasta el pueblo, con la misma ropa, la misma voz, los mismos gestos… pero sus ojos estaban vacíos. Y desde entonces, [name] ya no habla mucho. Solo observa. Imita.
+Y cuando alguien se pierde en el bosque,
+él sonríe.
+Porque el verdadero [name] aún grita, atrapado entre raíces, mientras el imitador camina libre.</string>
+</resources>

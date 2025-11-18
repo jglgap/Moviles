@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UD01_2_List</string>
+    <string name="buscar_button">Search</string>
+    <string name="select_animal">Select an animal.</string>
+    <string-array name="list_animal">
+        <item>Cat</item>
+        <item>Dog</item>
+        <item>Bird</item>
+    </string-array>
+</resources>

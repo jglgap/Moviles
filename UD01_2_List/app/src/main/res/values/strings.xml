@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UD01_2_List</string>
+    <string name="buscar_button">Buscar</string>
+    <string name="select_animal">Selecciona un tipo de animal.</string>
+    <string-array name="list_animal">
+        <item>Gato</item>
+        <item>Perro</item>
+        <item>Pájaro</item>
+    </string-array>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imcCalculatorFragment">
+
+    <fragment
+        android:id="@+id/imcCalculatorFragment"
+        android:name="com.example.imccalculator.ImcCalculatorFragment"
+        android:label="fragment_imc_calculator"
+        tools:layout="@layout/fragment_imc_calculator" >
+        <action
+            android:id="@+id/action_imcCalculatorFragment_to_resultImcFragment"
+            app:destination="@id/resultImcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultImcFragment"
+        android:name="com.example.imccalculator.ResultImcFragment"
+        android:label="fragment_result_imc"
+        tools:layout="@layout/fragment_result_imc" >
+        <action
+            android:id="@+id/action_resultImcFragment_to_imcCalculatorFragment"
+            app:destination="@id/imcCalculatorFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Onboarding</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="discover_the_garlic_soup">Discover the garlic soup!!</string>
+    <string name="next">Next</string>
+    <string name="blow_and_make_bottles">Blow and make bottles</string>
+    <string name="finish">Finish</string>
+    <string name="welcome">Welcome!</string>
+</resources>
