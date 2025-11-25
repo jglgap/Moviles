@@ -7,28 +7,40 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import com.example.space.databinding.FragmentStarsBinding
+
 
 class StarsFragment : Fragment() {
+    private var _binding: FragmentStarsBinding? = null
+    private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_stars, container, false)
+        _binding = FragmentStarsBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            val button_lendas = view.findViewById<Button>(R.id.button_lendas)
-            button_lendas.setOnClickListener {
+            binding.buttonLendas.setOnClickListener {
                 findNavController().navigate(R.id.action_starsFragment_to_lendasFragment)
             }
 
-            val button_observacion = view.findViewById<Button>(R.id.button_observacion)
-            button_observacion.setOnClickListener {
-                findNavController().navigate(R.id.action_starsFragment_to_observacionFragment)
-            }
+         binding.buttonObservacion.setOnClickListener {
+             findNavController().navigate(R.id.action_starsFragment_to_observacionFragment)
+         }
+
+
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
