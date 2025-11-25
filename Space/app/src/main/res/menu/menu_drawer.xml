@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/planetsFragment"
+        android:icon="@drawable/ic_planet"
+        android:title="@string/planets"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/starsFragment"
+        android:icon="@drawable/ic_star"
+        android:title="@string/starts"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/explorationFragment"
+        android:icon="@drawable/ic_moon"
+        android:title="@string/exploration"
+        app:showAsAction="always">
+    </item>
+</menu>

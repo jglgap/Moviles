@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Space</string>
+    <string name="exploration">Exploración da Lúa e Marte</string>
+    <string name="planets">Planetas do Sistema Solar</string>
+    <string name="starts">Estrelas e constelacións</string>
+    <string name="text_mercurio">Mercurio é o planeta mais pequeno dos oito planetas do sistema solar</string>
+    <string name="text_venus">Venus é o planeta con mais volcáns do Sistema Solar</string>
+    <string name="text_terra">O 71% da Terra está composta por auga</string>
+    <string name="text_marte">Marte ten a montaña mais alta do Sistema Solar, de 22 quilómetros de alto</string>
+    <string name="text_xupiter">Xúpiter é o planeta mais grande do Sistema Solar</string>
+    <string name="text_saturno">A órbita de Saturno ten unha duración de 29,5 anos</string>
+    <string name="text_urano">Os aneis de Urano son totalmente verticais</string>
+    <string name="text_neptuno">Neptuno é o planeta mais frío do Sistema Solar</string>
+    <string name="lendas">Lendas e mitoloxía</string>
+    <string name="observacion">Consellos sobre a observación</string>
+    <string name="text_initial">Coñece o Sistema Solar e descubre as misións espaciais</string>
+    <string name="title_technology">Tecnoloxía espacial e misións futuras</string>
+    <string name="casiopea">Constelación de Casiopea</string>
+    <string name="orion">Constelación de Orion</string>
+    <string name="osa_maior">Constelación da Osa Maior</string>
+</resources>

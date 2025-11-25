@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/initialFragment">
+
+    <fragment
+        android:id="@+id/starsFragment"
+        android:name="com.example.space.StarsFragment"
+        android:label="Estrelas e constelacións" >
+        <action
+            android:id="@+id/action_starsFragment_to_lendasFragment"
+            app:destination="@id/lendasFragment" />
+        <action
+            android:id="@+id/action_starsFragment_to_observacionFragment"
+            app:destination="@id/observacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/explorationFragment"
+        android:name="com.example.space.ExplorationFragment"
+        android:label="Exploración da Lúa e Marte" />
+    <fragment
+        android:id="@+id/planetsFragment"
+        android:name="com.example.space.PlanetsFragment"
+        android:label="Planetas do Sistema Solar" />
+    <fragment
+        android:id="@+id/technologyFragment"
+        android:name="com.example.space.TechnologyFragment"
+        android:label="Tecnoloxía espacial e misións futuras"
+        tools:layout="@layout/fragment_technology" />
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.example.space.InitialFragment"
+        android:label=""
+        tools:layout="@layout/fragment_initial" />
+    <fragment
+        android:id="@+id/lendasFragment"
+        android:name="com.example.space.LendasFragment"
+        android:label="fragment_lendas"
+        tools:layout="@layout/fragment_lendas" />
+    <fragment
+        android:id="@+id/observacionFragment"
+        android:name="com.example.space.ObservacionFragment"
+        android:label="fragment_observacion"
+        tools:layout="@layout/fragment_observacion" />
+</navigation>
