@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calculadorFragment">
+
+    <fragment
+        android:id="@+id/calculadorFragment"
+        android:name="com.example.velocidadmedia.CalculadorFragment"
+        android:label="fragment_calculador"
+        tools:layout="@layout/fragment_calculador" >
+        <action
+            android:id="@+id/action_calculadorFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/resultFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.velocidadmedia.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_calculadorFragment"
+            app:destination="@id/calculadorFragment"
+            app:popUpTo="@id/calculadorFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+</navigation>
