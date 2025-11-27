@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalculadorFragment">
+    tools:context=".CalculadorFragment"
+    android:orientation="vertical"
+    android:background="@color/pink"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300px"
+        android:src="@drawable/coche"/>
+
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="anaseyo" />
+        android:layout_height="wrap_content"
+        android:hint="Introduce la velocidad"
+        />
 
-</FrameLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce las horas "/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Calcular"
+        android:backgroundTint="@color/red"
+        android:layout_marginTop="50px"
+        android:id="@+id/calcularButton"
+        />
+
+
+
+
+</LinearLayout>
