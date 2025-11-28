@@ -17,13 +17,16 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Introduce la velocidad"
+        android:hint="Introduce los kilometros"
+        android:id="@+id/kilometros"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Introduce las horas "/>
+        android:hint="Introduce las horas "
+        android:id="@+id/horas"
+        />
 
     <Button
         android:layout_width="wrap_content"

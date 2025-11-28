@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import com.example.velocidadmedia.databinding.FragmentCalculadorBinding
 
@@ -16,9 +18,9 @@ class CalculadorFragment : Fragment() {
     private var _binding: FragmentCalculadorBinding? = null
     private val binding get() = _binding!!
 
-    val model: VelocidadModel by viewModels {
+    val model: VelocidadModel by viewModels(
         ownerProducer = { this.requireActivity() }
-    }
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +35,24 @@ class CalculadorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.kilometros.addTextChangedListener {
+            val valor = it.toString().toDoubleOrNull() ?: 0.0
+            model.velocidad.value = valor
+        }
+
+
+
+
+        binding.horas.addTextChangedListener {
+            val valor = it.toString().toDoubleOrNull() ?: 0.0
+            model.horas.value = valor
+        }
+
+
+
+
         binding.calcularButton.setOnClickListener {
+            model.calculate()
             view.findNavController().navigate(R.id.action_calculadorFragment_to_resultFragment)
         }
 

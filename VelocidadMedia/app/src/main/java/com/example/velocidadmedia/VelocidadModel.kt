@@ -9,11 +9,13 @@ class VelocidadModel : ViewModel() {
     val horas = MutableLiveData<Double>()
     val resultado = MutableLiveData<Double>()
 
+    val resultadoMs = MutableLiveData<Double>()
 
     fun calculate() {
         val v = velocidad.value ?: 0.0
         val h = horas.value ?: 0.0
-        resultado.value = v + h
+        resultado.value = v / h
+        resultadoMs.value = (v/h) / 3.6
 
     }
 
@@ -21,6 +23,7 @@ class VelocidadModel : ViewModel() {
         velocidad.value = 0.0
         horas.value = 0.0
         resultado.value = 0.0
+        resultadoMs.value = 0.0
 
     }
 }
