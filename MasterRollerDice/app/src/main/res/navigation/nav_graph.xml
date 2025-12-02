@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rollFragment">
+
+    <fragment
+        android:id="@+id/rollFragment"
+        android:name="com.example.masterrollerdice.RollFragment"
+        android:label="fragment_roll"
+        tools:layout="@layout/fragment_roll" />
+    <fragment
+        android:id="@+id/historicFragment"
+        android:name="com.example.masterrollerdice.HistoricFragment"
+        android:label="fragment_historic"
+        tools:layout="@layout/fragment_historic" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.masterrollerdice.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
