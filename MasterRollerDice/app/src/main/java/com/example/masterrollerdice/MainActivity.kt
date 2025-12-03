@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false) // Desactivar título automático
 
-        val toolbarTitle: TextView = findViewById(R.id.toolbarTitle)
-        toolbarTitle.text = getString(R.string.app_name)
-        val typeface = ResourcesCompat.getFont(this, R.font.imperial_script)
-        toolbarTitle.typeface = typeface
+     //   val toolbarTitle: TextView = findViewById(R.id.toolbarTitle)
+      //  toolbarTitle.text = getString(R.string.app_name)
+      //  val typeface = ResourcesCompat.getFont(this, R.font.imperial_script)
+       // toolbarTitle.typeface = typeface
 
         // Drawer y NavigationView
         drawerLayout = findViewById(R.id.drawer_layout)
