@@ -9,6 +9,7 @@ import android.widget.Toast
 
 import androidx.core.view.children
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.example.to_do_list.databinding.FragmentAddTasksBinding
 import com.google.android.material.chip.Chip
 
@@ -35,20 +36,38 @@ class AddTasksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val name = binding.taskName.text.toString()
+
+
+
+        var priority: String? = null
 
         binding.chipGroup.setOnCheckedStateChangeListener { group, checkedIds ->
-            val selectedChips = group.children
-                .filterIsInstance<Chip>()
-                .filter { it.isChecked }
-                .map { it.text.toString() }
-
-            Toast.makeText(this, "Selected: $selectedChips", Toast.LENGTH_SHORT).show()
+            if (checkedIds.isNotEmpty()) {
+                val chipId = checkedIds[0]
+                val chip = group.findViewById<Chip>(chipId)
+                priority = chip.text.toString()
+            } else {
+                priority = null
+            }
         }
 
 
         binding.createTaskButton.setOnClickListener {  v ->
-            model.addTask(name,"",false)
+            var nameOfTask = binding.taskNameField.text.toString()
+
+            if (priority == null){
+                Toast.makeText(requireContext(),"Please pick a priority", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            model.addTask(nameOfTask,priority.toString(),false)
+            binding.taskNameField.text.clear()
+        }
+
+        binding.goListButton.setOnClickListener {
+            view.findNavController().navigate(R.id.action_addTasksFragment_to_allTasksFragment)
+        }
+        binding.goResumeButton.setOnClickListener {
+            view.findNavController().navigate(R.id.action_addTasksFragment_to_resumeFragment)
         }
     }
 

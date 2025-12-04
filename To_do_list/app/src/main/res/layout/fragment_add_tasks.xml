@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <EditText
-            android:id="@+id/taskName"
+            android:id="@+id/taskNameField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -96,22 +96,22 @@
         >
 
         <Button
-            android:id="@+id/goHomeButton"
+            android:id="@+id/goListButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/aquamarine"
-            android:text="Home"
+            android:text="Go to list"
             tools:layout_editor_absoluteX="127dp"
             tools:layout_editor_absoluteY="524dp"
             android:layout_marginEnd="30dp"
             />
 
         <Button
-            android:id="@+id/goHomeButton"
+            android:id="@+id/goResumeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/pink"
-            android:text="Home"
+            android:text="Go to resume"
             tools:layout_editor_absoluteX="127dp"
             tools:layout_editor_absoluteY="524dp"
             />

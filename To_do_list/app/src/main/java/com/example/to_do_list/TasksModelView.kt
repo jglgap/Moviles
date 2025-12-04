@@ -27,4 +27,15 @@ class TasksModelView : ViewModel() {
         listTasks.value = updatedList
     }
 
+
+    fun toggleTaskCompleted(taskId: Int) {
+        val updatedList = listTasks.value.orEmpty().map { task ->
+            if (task.idtask == taskId) {
+                task.copy(completed = !task.completed) // Cambia completed a su opuesto
+            } else {
+                task
+            }
+        }
+        listTasks.value = updatedList
+    }
 }
