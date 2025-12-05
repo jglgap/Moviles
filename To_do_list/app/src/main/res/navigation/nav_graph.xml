@@ -36,5 +36,8 @@
         <action
             android:id="@+id/action_resumeFragment_to_addTasksFragment"
             app:destination="@id/addTasksFragment" />
+        <action
+            android:id="@+id/action_resumeFragment_to_allTasksFragment"
+            app:destination="@id/allTasksFragment" />
     </fragment>
 </navigation>

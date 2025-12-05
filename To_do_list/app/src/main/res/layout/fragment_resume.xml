@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResumeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".ResumeFragment"
+    android:orientation="vertical"
+    android:background="@color/clay"
+    >
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/completas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        />
+    <TextView
+        android:id="@+id/dificiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        />
+    <TextView
+        android:id="@+id/medias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:id="@+id/faciles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:id="@+id/goListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/aquamarine"
+            android:text="Go to list"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_editor_absoluteY="524dp"
+            android:layout_marginEnd="30dp"
+            />
+
+        <Button
+            android:id="@+id/goHomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/pink"
+            android:text="Go to Home"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_editor_absoluteY="524dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
