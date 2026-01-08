@@ -2,12 +2,16 @@ package com.example.masterrollerdice
 
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.Switch
+
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.viewModels
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.NavController
@@ -16,6 +20,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import kotlin.getValue
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+
+    val model: viewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +77,26 @@ class MainActivity : AppCompatActivity() {
         toggle.drawerArrowDrawable.color = Color.WHITE
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
+
+        model.nightMode.observe(this) { isNightMode ->
+            if (isNightMode) {
+                findViewById<DrawerLayout>(R.id.drawer_layout).setBackgroundResource(R.color.dark_blue)
+                val color = ContextCompat.getColor(this, R.color.white)
+                findViewById<TextView>(R.id.toolbarTitle).setTextColor(color)
+
+            } else {
+                findViewById<DrawerLayout>(R.id.drawer_layout).setBackgroundResource(R.color.lavender)
+                val color = ContextCompat.getColor(this, R.color.dark_blue)
+                findViewById<TextView>(R.id.toolbarTitle).setTextColor(color)
+
+
+            }
+        }
+
+
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
