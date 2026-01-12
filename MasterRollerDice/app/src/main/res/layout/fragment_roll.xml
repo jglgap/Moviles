@@ -1,15 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RollFragment"
     >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/firstRow"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Roll fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
 
-</FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dadoFour"
+            app:cardBackgroundColor="@color/dark_blue">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/linearDado4"
+               android:orientation="vertical"
+               >
+               <ImageView
+                   android:layout_width="250px"
+                   android:layout_height="250px"
+                   android:src="@drawable/dado_cuatro"
+                   />
+
+               <LinearLayout
+                   android:id="@+id/lineDado4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   >
+
+                   <com.google.android.material.button.MaterialButton
+                       android:layout_width="32dp"
+                       android:layout_height="32dp"
+                       app:cornerRadius="16dp"
+                       app:backgroundTint="#E0E0E0"
+                       app:icon="@drawable/ic_minus"
+                       app:iconSize="12dp"
+                       app:iconGravity="start"
+                       app:iconPadding="0dp"
+                       android:insetTop="0dp"
+                       android:insetBottom="0dp"
+                       android:insetLeft="0dp"
+                       android:insetRight="0dp"
+                       android:padding="10dp"
+                       android:text=" " />
+
+                   <com.google.android.material.button.MaterialButton
+                       android:layout_width="32dp"
+                       android:layout_height="32dp"
+                       app:cornerRadius="16dp"
+                       app:backgroundTint="#E0E0E0"
+                       app:icon="@drawable/ic_add"
+                       app:iconSize="12dp"
+                       app:iconGravity="start"
+                       app:iconPadding="0dp"
+                       android:insetTop="0dp"
+                       android:insetBottom="0dp"
+                       android:insetLeft="0dp"
+                       android:insetRight="0dp"
+                       android:padding="10dp"
+                       android:text=" " />
+
+
+
+
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,6 +35,14 @@
         android:textStyle="bold"
         />
 
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchSounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:thumbTint="@color/switch_thumb"
+        app:trackTint="@color/switch_track" />
+
 
 
 </LinearLayout>
