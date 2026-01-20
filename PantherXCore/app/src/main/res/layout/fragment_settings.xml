@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/holo_red_dark">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temas"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/whiter"
+            />
+
+        <!-- RadioGroup -->
+        <RadioGroup
+            android:id="@+id/radioGroupTheme"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            >
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioPurpura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/Purpura"
+                android:textColor="@color/whiter"
+                app:buttonTint="@color/whiter"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioAmarillo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/Amarillo"
+                android:textColor="@color/whiter"
+                app:buttonTint="@color/whiter"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioNaranja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/Naranja"
+                android:textColor="@color/whiter"
+                app:buttonTint="@color/whiter"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioGris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/Gris"
+                android:textColor="@color/whiter"
+                app:buttonTint="@color/whiter"/>
+        </RadioGroup>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="24dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Apariencia"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/whiter"/>
+        <!-- Switch row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/claro"
+                android:textSize="16sp"
+                android:textColor="@color/whiter"/>
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:thumbTint="@color/darker"
+                app:trackTint="@color/whiter"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiter"
+                android:text="@string/oscuro"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
