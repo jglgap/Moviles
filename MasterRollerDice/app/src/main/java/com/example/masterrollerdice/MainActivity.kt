@@ -2,6 +2,7 @@ package com.example.masterrollerdice
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Switch
 
 import android.widget.TextView
@@ -10,6 +11,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.viewModels
 import com.google.android.material.appbar.MaterialToolbar
@@ -40,7 +42,13 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false) // Desactivar título automático
 
-     //   val toolbarTitle: TextView = findViewById(R.id.toolbarTitle)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_settings)
+
+
+
+
+
+        //   val toolbarTitle: TextView = findViewById(R.id.toolbarTitle)
       //  toolbarTitle.text = getString(R.string.app_name)
       //  val typeface = ResourcesCompat.getFont(this, R.font.imperial_script)
        // toolbarTitle.typeface = typeface
@@ -68,15 +76,17 @@ class MainActivity : AppCompatActivity() {
 
         // 🔹 Acción de la hamburguesa con color blanco
         val toggle = ActionBarDrawerToggle(
-            this,
+           this,
             drawerLayout,
             toolbar,
             R.string.open_drawer,
-            R.string.close_drawer
+           R.string.close_drawer
         )
+
         toggle.drawerArrowDrawable.color = Color.WHITE
+
         drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+       toggle.syncState()
 
 
         model.nightMode.observe(this) { isNightMode ->
@@ -102,4 +112,9 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+
+
+
+
 }
