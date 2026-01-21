@@ -1,16 +1,11 @@
 package com.example.pantherxcore
 
-import android.graphics.Color
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.activity.viewModels
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.navigateUp
@@ -56,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         // 🔹 Establecer el icono personalizado directamente en el toolbar
-        toolbar.navigationIcon = ContextCompat.getDrawable(this, R.drawable.logo_morado)
+        toolbar.navigationIcon = ContextCompat.getDrawable(this, R.drawable.logo_gris)
 
         // 🔹 Configurar el listener para abrir/cerrar el drawer
         toolbar.setNavigationOnClickListener {

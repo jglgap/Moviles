@@ -9,7 +9,7 @@
     app:cardCornerRadius="16dp"
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true"
-    app:cardBackgroundColor="@android:color/holo_red_dark">
+>
 
     <LinearLayout
         android:id="@+id/rootLayout"
@@ -45,7 +45,8 @@
                 android:padding="12dp"
                 android:text="@string/Purpura"
                 android:textColor="@color/whiter"
-                app:buttonTint="@color/whiter"/>
+                app:buttonTint="@color/whiter"
+                android:checked="true"/>
 
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/radioAmarillo"
