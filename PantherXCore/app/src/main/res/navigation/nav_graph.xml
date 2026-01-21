@@ -2,10 +2,22 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/settingsFragment">
+    app:startDestination="@id/trainingListFragment">
 
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.pantherxcore.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/trainingListFragment"
+        android:name="com.example.pantherxcore.TrainingListFragment"
+        android:label="TrainingListFragment" >
+        <action
+            android:id="@+id/action_trainingListFragment_to_addTrainingFragment"
+            app:destination="@id/addTrainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTrainingFragment"
+        android:name="com.example.pantherxcore.AddTrainingFragment"
+        android:label="AddTrainingFragment" />
 </navigation>

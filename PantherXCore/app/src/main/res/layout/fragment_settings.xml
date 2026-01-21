@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/temas"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"
             android:textColor="@color/whiter"
@@ -43,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
+                android:textSize="20sp"
                 android:text="@string/Purpura"
                 android:textColor="@color/whiter"
                 app:buttonTint="@color/whiter"
@@ -53,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
+                android:textSize="20sp"
                 android:text="@string/Amarillo"
                 android:textColor="@color/whiter"
                 app:buttonTint="@color/whiter"/>
@@ -62,6 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
+                android:textSize="20sp"
                 android:text="@string/Naranja"
                 android:textColor="@color/whiter"
                 app:buttonTint="@color/whiter"/>
@@ -71,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
+                android:textSize="20sp"
                 android:text="@string/Gris"
                 android:textColor="@color/whiter"
                 app:buttonTint="@color/whiter"/>
@@ -88,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Apariencia"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"
             android:textColor="@color/whiter"/>
@@ -103,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/claro"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textColor="@color/whiter"/>
 
 
@@ -118,11 +122,22 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/whiter"
                 android:text="@string/oscuro"
-                android:textSize="16sp"/>
+                android:textSize="20sp"/>
         </LinearLayout>
 
 
 
-    </LinearLayout>
 
+    </LinearLayout>
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="168dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:text="@string/voler"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        />
 </com.google.android.material.card.MaterialCardView>

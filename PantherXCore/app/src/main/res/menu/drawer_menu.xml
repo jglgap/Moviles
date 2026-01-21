@@ -5,5 +5,8 @@
         android:id="@+id/settingsFragment"
         android:title="Configuracion"
         android:icon="@drawable/ic_settings" />
-
+    <item
+        android:id="@+id/trainingListFragment"
+        android:title="Entrenamientos"
+        android:icon="@drawable/ic_settings"/>
 </menu>

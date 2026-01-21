@@ -91,6 +91,11 @@ class SettingsFragment : Fragment() {
                 updateCardColor()
             }
         }
+        lifecycleScope.launch {
+            viewModel.isBackgroundColorChanged.collect { isChanged ->
+                updateSwitchColor(isChanged)
+            }
+        }
     }
 
     private fun updateCardColor() {
@@ -109,6 +114,21 @@ class SettingsFragment : Fragment() {
             else -> R.color.purpura // Por defecto púrpura
         }
         return ContextCompat.getColor(requireContext(), colorRes)
+    }
+    private fun updateSwitchColor(isChanged: Boolean) {
+        val colorRes = if (isChanged) {
+            R.color.whiter // Color cuando el switch está ON
+        } else {
+            R.color.darker     // Color cuando el switch está OFF
+        }
+
+        val backgroundColorRes = if (isChanged) {
+            R.color.darker  // Color cuando el switch está ON
+        } else {
+            R.color.whiter     // Color cuando el switch está OFF
+        }
+        binding.backButton.setBackgroundColor(ContextCompat.getColor(requireContext(), backgroundColorRes))
+        binding.backButton.setTextColor(ContextCompat.getColor(requireContext(), colorRes));
     }
 
 }
