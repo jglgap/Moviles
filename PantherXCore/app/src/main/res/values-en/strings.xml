@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">PantherX Core</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="temas">Themes</string>
+    <string name="Purpura">Purple</string>
+    <string name="Amarillo">Yellow</string>
+    <string name="Naranja">Orange</string>
+    <string name="Gris">Gray</string>
+    <string name="Apariencia">Appearance</string>
+    <string name="claro">Light</string>
+    <string name="oscuro">Dark</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="close_drawer">Close navigation drawer</string>
+    <string name="voler">Go back</string>
+    <string name="Nombre">Training name</string>
+    <string name="descripcion">Description</string>
+    <string name="añadir">Add</string>
+</resources>
