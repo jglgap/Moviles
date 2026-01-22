@@ -15,7 +15,18 @@
         android:layout_centerInParent="true"
         />
 
+    <TextView
 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to"
+
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/darker"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
     <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
@@ -27,6 +38,6 @@
         android:textColor="@color/darker"
         android:layout_below="@id/logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="78dp"/>
 
 </RelativeLayout>

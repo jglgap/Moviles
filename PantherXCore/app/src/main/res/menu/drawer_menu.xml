@@ -2,11 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/settingsFragment"
-        android:title="Configuracion"
-        android:icon="@drawable/ic_settings" />
-    <item
         android:id="@+id/trainingListFragment"
         android:title="Entrenamientos"
-        android:icon="@drawable/ic_settings"/>
+        android:icon="@drawable/ic_pesa"/>
+    <item
+        android:id="@+id/exerciseListFragment"
+        android:title="Entrenamientos"
+        android:icon="@drawable/ic_man"/>
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="Configuracion"
+        android:icon="@drawable/ic_config" />
+
 </menu>

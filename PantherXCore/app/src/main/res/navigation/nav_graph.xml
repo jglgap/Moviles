@@ -20,4 +20,8 @@
         android:id="@+id/addTrainingFragment"
         android:name="com.example.pantherxcore.AddTrainingFragment"
         android:label="AddTrainingFragment" />
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="com.example.pantherxcore.ExerciseListFragment"
+        android:label="ExerciseListFragment" />
 </navigation>

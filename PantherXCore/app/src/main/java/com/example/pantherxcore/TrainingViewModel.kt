@@ -11,6 +11,28 @@ data class Training(
     val name: String,
     val description: String
 )
+enum class ExerciseType(val displayName: String) {
+    PECTORAL("Ejercicios pectoral"),
+    ESPALDA("Ejercicios espalda"),
+    BICEPS("Ejercicios bíceps"),
+    TRICEPS("Ejercicios tríceps"),
+    HOMBROS("Ejercicios hombros"),
+    PIERNAS("Ejercicios piernas")
+}
+
+// Modelo de datos para ejercicios
+data class Exercise(
+    val id: Int,
+    val name: String,
+    val type: ExerciseType,
+    val imageRes: Int
+)
+
+// Sealed class para los items de la lista (headers + ejercicios)
+sealed class ExerciseListItem {
+    data class Header(val title: String, val type: ExerciseType) : ExerciseListItem()
+    data class ExerciseItem(val exercise: Exercise) : ExerciseListItem()
+}
 class TrainingViewModel : ViewModel(){
     // Variable booleana para cambiar el color de fondo
     private val _isBackgroundColorChanged = MutableStateFlow(false)
@@ -64,6 +86,62 @@ class TrainingViewModel : ViewModel(){
         _trainings.value = _trainings.value + newTraining
     }
 
+
+    // Lista estática de ejercicios
+    private val _exercises = MutableStateFlow<List<Exercise>>(
+        listOf(
+            // Ejercicios pectorales
+            Exercise(1, "Press banca", ExerciseType.PECTORAL, R.drawable.press_banca),
+            Exercise(2, "Press con mancuerna", ExerciseType.PECTORAL, R.drawable.banca_mancuernas),
+            Exercise(3, "Cruce de poleas", ExerciseType.PECTORAL, R.drawable.cruce_poleas),
+
+            // Ejercicios espalda
+            Exercise(4, "Jalón al pecho", ExerciseType.ESPALDA, R.drawable.jalon_pecho),
+            Exercise(5, "Remo con barra", ExerciseType.ESPALDA, R.drawable.remo_barra),
+
+            // Ejercicios bíceps
+            Exercise(6, "Curl martillo", ExerciseType.BICEPS, R.drawable.curl_martillo),
+            Exercise(7, "Curl de biceps martillo", ExerciseType.BICEPS, R.drawable.curl_biceps),
+
+            // Ejercicios triceps
+            Exercise(8, "Paralelas", ExerciseType.TRICEPS, R.drawable.paralelas),
+            Exercise(9, "Extension en poleas", ExerciseType.TRICEPS, R.drawable.extension_poleas),
+
+            //Ejercicios hombros
+            Exercise(10, "Elevacion frontal", ExerciseType.HOMBROS, R.drawable.elevacion_frontal),
+            Exercise(11, "Elevacion lateral", ExerciseType.HOMBROS, R.drawable.elevacion_lateral),
+            Exercise(12, "Press militar", ExerciseType.HOMBROS, R.drawable.press_militar),
+            //Ejercicios pierna
+            Exercise(13, "Sentadilla libre", ExerciseType.PIERNAS, R.drawable.sentadilla_libre),
+            Exercise(14, "Prensa", ExerciseType.PIERNAS, R.drawable.prensa),
+            Exercise(15, "Extensión de cuadriceps", ExerciseType.PIERNAS, R.drawable.extension_cuadriceps),
+
+        )
+    )
+    val exercises: StateFlow<List<Exercise>> = _exercises.asStateFlow()
+
+    // Función para obtener la lista con headers
+    fun getExercisesWithHeaders(): List<ExerciseListItem> {
+        val items = mutableListOf<ExerciseListItem>()
+
+        // Agrupar ejercicios por tipo
+        val groupedExercises = _exercises.value.groupBy { it.type }
+
+        // Para cada tipo, agregar header y ejercicios
+        ExerciseType.values().forEach { type ->
+            val exercisesOfType = groupedExercises[type]
+            if (!exercisesOfType.isNullOrEmpty()) {
+                // Agregar header
+                items.add(ExerciseListItem.Header(type.displayName, type))
+                // Agregar ejercicios
+                exercisesOfType.forEach { exercise ->
+                    items.add(ExerciseListItem.ExerciseItem(exercise))
+                }
+            }
+        }
+
+        return items
+    }
     // Función para eliminar un entrenamiento por ID
    // fun removeTraining(id: Int) {
     //    _trainings.value = _trainings.value.filter { it.id != id }

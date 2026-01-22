@@ -63,6 +63,9 @@ class SettingsFragment : Fragment() {
         binding.switchBackground.setOnCheckedChangeListener { _, isChecked ->
             viewModel.setBackgroundColorChanged(isChecked)
         }
+        binding.backButton.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun observeViewModel() {
