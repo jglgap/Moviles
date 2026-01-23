@@ -7,7 +7,7 @@
         android:icon="@drawable/ic_pesa"/>
     <item
         android:id="@+id/exerciseListFragment"
-        android:title="Entrenamientos"
+        android:title="Ejercicios"
         android:icon="@drawable/ic_man"/>
     <item
         android:id="@+id/settingsFragment"
