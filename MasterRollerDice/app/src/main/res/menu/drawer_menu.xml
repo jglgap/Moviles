@@ -2,17 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/rollFragment"
+        android:id="@+id/diceFragment"
         android:title="Tirar dados"
 
 
         />
 
     <item
-        android:id="@+id/historicFragment"
+        android:id="@+id/historyFragment"
         android:title="Historial" />
 
-
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="Configuracion"></item>
 
 
 

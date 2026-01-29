@@ -4,26 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#0A1A1A">
+    android:id="@+id/layoutDice"
+    android:background="@color/lavender">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
-        <TextView
-            android:id="@+id/titleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Master Roll Dice"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:fontFamily="cursive"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp" />
+
 
         <!-- Primera fila de dados -->
         <LinearLayout
@@ -34,19 +23,20 @@
             android:weightSum="3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/titleText"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="24dp">
 
             <!-- D4 Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
+                android:id="@+id/card1"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="4dp"
-                app:cardBackgroundColor="#1A2F2F"
+                app:cardBackgroundColor="@color/dark_blue"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
-
+                app:cardElevation="4dp"
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -77,10 +67,10 @@
                         android:layout_marginTop="4dp">
 
                         <Button
-                            android:id="@+id/btnAddD4"
+                            android:id="@+id/btnRemoveD4"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="+"
+                            android:text="-"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -91,10 +81,10 @@
                             android:insetBottom="0dp" />
 
                         <Button
-                            android:id="@+id/btnRemoveD4"
+                            android:id="@+id/btnAddD4"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="-"
+                            android:text="+"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -110,13 +100,15 @@
 
             <!-- D6 Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
+                android:id="@+id/card2"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="4dp"
-                app:cardBackgroundColor="#1A2F2F"
+                app:cardBackgroundColor="@color/dark_blue"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -148,10 +140,10 @@
                         android:layout_marginTop="4dp">
 
                         <Button
-                            android:id="@+id/btnAddD6"
+                            android:id="@+id/btnRemoveD6"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="+"
+                            android:text="-"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -162,10 +154,10 @@
                             android:insetBottom="0dp" />
 
                         <Button
-                            android:id="@+id/btnRemoveD6"
+                            android:id="@+id/btnAddD6"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="-"
+                            android:text="+"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -181,13 +173,15 @@
 
             <!-- D8 Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
+                android:id="@+id/card3"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="4dp"
-                app:cardBackgroundColor="#1A2F2F"
+                app:cardBackgroundColor="@color/dark_blue"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -219,10 +213,10 @@
                         android:layout_marginTop="4dp">
 
                         <Button
-                            android:id="@+id/btnAddD8"
+                            android:id="@+id/btnRemoveD8"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="+"
+                            android:text="-"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -233,10 +227,10 @@
                             android:insetBottom="0dp" />
 
                         <Button
-                            android:id="@+id/btnRemoveD8"
+                            android:id="@+id/btnAddD8"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="-"
+                            android:text="+"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -265,13 +259,15 @@
 
             <!-- D10 Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
+                android:id="@+id/card4"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="4dp"
-                app:cardBackgroundColor="#1A2F2F"
+                app:cardBackgroundColor="@color/dark_blue"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -303,10 +299,10 @@
                         android:layout_marginTop="4dp">
 
                         <Button
-                            android:id="@+id/btnAddD10"
+                            android:id="@+id/btnRemoveD10"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="+"
+                            android:text="-"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -317,10 +313,10 @@
                             android:insetBottom="0dp" />
 
                         <Button
-                            android:id="@+id/btnRemoveD10"
+                            android:id="@+id/btnAddD10"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="-"
+                            android:text="+"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -336,13 +332,15 @@
 
             <!-- D12 Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
+                android:id="@+id/card5"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="4dp"
-                app:cardBackgroundColor="#1A2F2F"
+                app:cardBackgroundColor="@color/dark_blue"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -374,10 +372,10 @@
                         android:layout_marginTop="4dp">
 
                         <Button
-                            android:id="@+id/btnAddD12"
+                            android:id="@+id/btnRemoveD12"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="+"
+                            android:text="-"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -388,10 +386,10 @@
                             android:insetBottom="0dp" />
 
                         <Button
-                            android:id="@+id/btnRemoveD12"
+                            android:id="@+id/btnAddD12"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="-"
+                            android:text="+"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -407,13 +405,15 @@
 
             <!-- D20 Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
+                android:id="@+id/card6"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="4dp"
-                app:cardBackgroundColor="#1A2F2F"
+                app:cardBackgroundColor="@color/dark_blue"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -445,10 +445,10 @@
                         android:layout_marginTop="4dp">
 
                         <Button
-                            android:id="@+id/btnAddD20"
+                            android:id="@+id/btnRemoveD20"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="+"
+                            android:text="-"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -459,10 +459,10 @@
                             android:insetBottom="0dp" />
 
                         <Button
-                            android:id="@+id/btnRemoveD20"
+                            android:id="@+id/btnAddD20"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="-"
+                            android:text="+"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -479,6 +479,7 @@
 
         <!-- Tercera fila - D100 -->
         <LinearLayout
+
             android:id="@+id/row3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -491,13 +492,15 @@
 
             <!-- D100 Card -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/card7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="4dp"
-                app:cardBackgroundColor="#1A2F2F"
+                app:cardBackgroundColor="@color/dark_blue"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -529,10 +532,10 @@
                         android:layout_marginTop="4dp">
 
                         <Button
-                            android:id="@+id/btnAddD100"
+                            android:id="@+id/btnRemoveD100"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="+"
+                            android:text="-"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -543,10 +546,10 @@
                             android:insetBottom="0dp" />
 
                         <Button
-                            android:id="@+id/btnRemoveD100"
+                            android:id="@+id/btnAddD100"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:text="-"
+                            android:text="+"
                             android:textSize="14sp"
                             android:backgroundTint="#4A9D9D"
                             android:textColor="#FFFFFF"
@@ -571,7 +574,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="El resultado de la tirada es:"
-            android:textColor="#8FAAAA"
+            android:textColor="@color/dark_blue"
             android:textSize="16sp"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -597,7 +600,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="#8FAAAA"
+            android:textColor="@color/dark_blue"
             android:textSize="14sp"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -631,7 +634,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tirar"
                 android:textColor="#FFFFFF"
-                android:backgroundTint="#7B3FF2"
+                android:backgroundTint="@color/dark_blue"
                 android:paddingStart="32dp"
                 android:paddingEnd="32dp"
                 android:layout_marginStart="16dp" />

@@ -13,6 +13,7 @@ import com.example.masterrollerdice.R
 import com.example.masterrollerdice.databinding.FragmentHistoryBinding
 import com.example.masterrollerdice.DiceRoll
 import com.example.masterrollerdice.DiceViewModel
+import com.example.masterrollerdice.SettingsViewModel
 
 class HistoryFragment : Fragment() {
 
@@ -20,6 +21,10 @@ class HistoryFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: DiceViewModel by activityViewModels()
+    private val SviewModel: SettingsViewModel by activityViewModels()
+
+    // Variable para almacenar el estado actual del modo nocturno
+    private var isNightMode = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +40,41 @@ class HistoryFragment : Fragment() {
 
         setupObservers()
         setupClickListeners()
+
+        // Mantenemos tus observadores originales, solo añadimos el almacenamiento del estado
+        SviewModel.nightMode.observe(viewLifecycleOwner) { isNightMode ->
+            this.isNightMode = isNightMode  // Guardamos el estado actual
+
+            val backColor = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.lavender)
+            }
+            val color = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.white)
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+            }
+            binding.titleText.setTextColor(color)
+            binding.layoutHistory.setBackgroundColor(backColor)
+        }
+        SviewModel.nightMode.observe(viewLifecycleOwner) { isNightMode ->
+            this.isNightMode = isNightMode  // Guardamos el estado actual
+
+            val backColor = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.lavender)
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+            }
+            val color = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.white)
+            }
+
+            binding.btnClearHistory.setTextColor(color)
+            binding.btnClearHistory.setBackgroundColor(backColor)
+        }
     }
 
     private fun setupObservers() {
@@ -56,7 +96,11 @@ class HistoryFragment : Fragment() {
             val emptyText = TextView(requireContext()).apply {
                 text = "No hay tiradas en el historial"
                 textSize = 16f
-                setTextColor(ContextCompat.getColor(requireContext(), android.R.color.darker_gray))
+                // ✅ SOLO CAMBIO AQUÍ: color adaptativo para el texto vacío
+                setTextColor(if (isNightMode)
+                    ContextCompat.getColor(requireContext(), R.color.white)
+                else
+                    ContextCompat.getColor(requireContext(), R.color.dark_blue))
                 gravity = android.view.Gravity.CENTER
                 setPadding(16, 32, 16, 32)
             }
@@ -79,7 +123,11 @@ class HistoryFragment : Fragment() {
                 bottomMargin = 24
             }
             radius = 24f
-            setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.card_background))
+            // ✅ SOLO CAMBIO AQUÍ: fondo adaptativo para la tarjeta
+            setCardBackgroundColor(if (isNightMode)
+                ContextCompat.getColor(requireContext(), R.color.lavender)  // Modo nocturno: fondo claro
+            else
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)) // Modo día: fondo oscuro
             cardElevation = 8f
         }
 
@@ -91,13 +139,17 @@ class HistoryFragment : Fragment() {
         val dateText = TextView(requireContext()).apply {
             text = diceRoll.date
             textSize = 14f
-            setTextColor(ContextCompat.getColor(requireContext(), R.color.text_secondary))
+            setTextColor(ContextCompat.getColor(requireContext(), R.color.mustard))
         }
 
         val diceInfoText = TextView(requireContext()).apply {
             text = diceRoll.getDiceDescription()
             textSize = 16f
-            setTextColor(ContextCompat.getColor(requireContext(), android.R.color.white))
+            // ✅ Pequeño ajuste necesario para legibilidad (blanco en fondo oscuro, dark_blue en fondo claro)
+            setTextColor(if (isNightMode)
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+            else
+                ContextCompat.getColor(requireContext(), android.R.color.white))
             setPadding(0, 8, 0, 0)
         }
 

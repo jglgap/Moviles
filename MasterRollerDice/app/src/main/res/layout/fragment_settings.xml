@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SettingsFragment"
+    android:orientation="vertical"
+    android:id="@+id/layoutSettings">
+
+    <TextView
+        android:id="@+id/nightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Night mode"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchNight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:thumbTint="@color/switch_thumb"
+        app:trackTint="@color/switch_track" />
+
+    <TextView
+        android:id="@+id/soundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchSounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:thumbTint="@color/switch_thumb"
+        app:trackTint="@color/switch_track" />
+
+
+
+</LinearLayout>

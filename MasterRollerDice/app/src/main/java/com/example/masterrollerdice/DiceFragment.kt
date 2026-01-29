@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.masterrollerdice.databinding.FragmentDiceBinding
@@ -15,7 +16,7 @@ class DiceFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: DiceViewModel by activityViewModels()
-
+    private val SviewModel: SettingsViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,6 +31,66 @@ class DiceFragment : Fragment() {
 
         setupObservers()
         setupClickListeners()
+        SviewModel.nightMode.observe(viewLifecycleOwner) { isNightMode ->
+            val backColor = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.lavender)
+            }
+
+            binding.layoutDice.setBackgroundColor(backColor)
+
+        }
+        SviewModel.nightMode.observe(viewLifecycleOwner) { isNightMode ->
+            val backColor = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.gray)
+
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+            }
+
+            binding.card1.setCardBackgroundColor(backColor)
+            binding.card2.setCardBackgroundColor(backColor)
+            binding.card3.setCardBackgroundColor(backColor)
+            binding.card4.setCardBackgroundColor(backColor)
+            binding.card5.setCardBackgroundColor(backColor)
+            binding.card6.setCardBackgroundColor(backColor)
+            binding.card7.setCardBackgroundColor(backColor)
+
+        }
+        SviewModel.nightMode.observe(viewLifecycleOwner) { isNightMode ->
+            val backColor = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.white)
+
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+            }
+
+            binding.resultText.setTextColor(backColor)
+            binding.diceBreakdown.setTextColor(backColor)
+
+        }
+        SviewModel.nightMode.observe(viewLifecycleOwner) { isNightMode ->
+            val backColor = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.lavender)
+
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+            }
+            val color = if (isNightMode) {
+                ContextCompat.getColor(requireContext(), R.color.dark_blue)
+
+            } else {
+                ContextCompat.getColor(requireContext(), R.color.white)
+            }
+
+            binding.btnRoll.setTextColor(color)
+            binding.btnRoll.setBackgroundColor(backColor)
+
+        }
+
+
     }
 
     private fun setupObservers() {

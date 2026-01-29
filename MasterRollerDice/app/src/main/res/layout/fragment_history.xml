@@ -3,22 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A1A1A"
+    android:background="@color/lavender"
+    android:id="@+id/layoutHistory"
     android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/historyIcon"
+        android:layout_width="107dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Icono de historial"
+        android:src="@drawable/logo_dragon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Historial"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/dark_blue"
         android:textSize="24sp"
         android:textStyle="bold"
         android:fontFamily="cursive"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/historyIcon"
+        android:layout_marginTop="8dp" />
 
     <Button
         android:id="@+id/btnClearHistory"
@@ -26,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="Limpiar Historial"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#7B3FF2"
+        android:backgroundTint="@color/dark_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleText"

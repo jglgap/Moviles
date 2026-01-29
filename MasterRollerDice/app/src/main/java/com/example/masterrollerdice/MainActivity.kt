@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     val model: DiceViewModel by viewModels()
-
+    val Smodel: SettingsViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -64,7 +64,8 @@ class MainActivity : AppCompatActivity() {
 
         // Destinos top-level
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.rollFragment, R.id.historicFragment, R.id.settingsFragment),
+            setOf(R.id.diceFragment, R.id.historyFragment),
+            //setOf(R.id.rollFragment, R.id.historicFragment, R.id.settingsFragment),
             drawerLayout
         )
 
@@ -89,7 +90,8 @@ class MainActivity : AppCompatActivity() {
         toggle.syncState()
 
 
-        model.nightMode.observe(this) { isNightMode ->
+
+       Smodel.nightMode.observe(this) { isNightMode ->
             if (isNightMode) {
                 findViewById<DrawerLayout>(R.id.drawer_layout).setBackgroundResource(R.color.dark_blue)
                 val color = ContextCompat.getColor(this, R.color.white)
