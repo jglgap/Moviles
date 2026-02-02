@@ -12,9 +12,15 @@
         android:id="@+id/historyFragment"
         android:title="Historial" />
 
+
+    <item
+        android:id="@+id/statisticstwoFragment"
+        android:title="Estadistiscas"></item>
+
     <item
         android:id="@+id/settingsFragment"
         android:title="Configuracion"></item>
+
 
 
 

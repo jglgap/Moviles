@@ -18,4 +18,12 @@
         android:name="com.example.masterrollerdice.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.masterrollerdice.StatisticsFragment"
+        android:label="StatisticsFragment" />
+    <fragment
+        android:id="@+id/statisticstwoFragment"
+        android:name="com.example.masterrollerdice.StatisticstwoFragment"
+        android:label="StatisticstwoFragment" />
 </navigation>
